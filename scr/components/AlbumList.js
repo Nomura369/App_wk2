@@ -1,19 +1,73 @@
-import { StyleSheet, Text, View, Image } from 'react-native';
+import { StyleSheet, Text, View, Image, ScrollView } from 'react-native';
 
 const AlbumList = () => {
   return (
-    <View style={styles.cardContainerStyle}>
+    <ScrollView>
+      <View style={styles.cardContainerStyle}>
         <View style={[styles.thumbnailContainerStyle, styles.cardSectionStyle]}>
             <Image style={styles.thumbnailStyle} source={require('D:/Dprogram files/nodejs/node_project/wk2/image/yonezu_thumbnail.jpg')} />
             <View style={styles.headerContentStyle}>
-            <Text>diorama</Text>
-            <Text>Yonezu Kenshi</Text>
+            <Text style={styles.albumTitleStyle}>diorama</Text>
+            <Text style={styles.albumSingerStyle}>Yonezu Kenshi</Text>
             </View>
         </View>
         <View style={styles.cardSectionStyle}>
             <Image style={styles.imageStyle} source={require('D:/Dprogram files/nodejs/node_project/wk2/image/diorama.jpg')} />
+        </View>      
+      </View>
+
+      <View style={styles.cardContainerStyle}>
+        <View style={[styles.thumbnailContainerStyle, styles.cardSectionStyle]}>
+            <Image style={styles.thumbnailStyle} source={require('D:/Dprogram files/nodejs/node_project/wk2/image/yonezu_thumbnail.jpg')} />
+            <View style={styles.headerContentStyle}>
+            <Text style={styles.albumTitleStyle}>YANKEE</Text>
+            <Text style={styles.albumSingerStyle}>Yonezu Kenshi</Text>
+            </View>
         </View>
-    </View>
+        <View style={styles.cardSectionStyle}>
+            <Image style={styles.imageStyle} source={require('D:/Dprogram files/nodejs/node_project/wk2/image/yankee.jpeg')} />
+        </View>      
+      </View>
+
+      <View style={styles.cardContainerStyle}>
+        <View style={[styles.thumbnailContainerStyle, styles.cardSectionStyle]}>
+            <Image style={styles.thumbnailStyle} source={require('D:/Dprogram files/nodejs/node_project/wk2/image/yonezu_thumbnail.jpg')} />
+            <View style={styles.headerContentStyle}>
+            <Text style={styles.albumTitleStyle}>Bremen</Text>
+            <Text style={styles.albumSingerStyle}>Yonezu Kenshi</Text>
+            </View>
+        </View>
+        <View style={styles.cardSectionStyle}>
+            <Image style={styles.imageStyle} source={require('D:/Dprogram files/nodejs/node_project/wk2/image/bremen.jpg')} />
+        </View>      
+      </View>
+
+      <View style={styles.cardContainerStyle}>
+        <View style={[styles.thumbnailContainerStyle, styles.cardSectionStyle]}>
+            <Image style={styles.thumbnailStyle} source={require('D:/Dprogram files/nodejs/node_project/wk2/image/yonezu_thumbnail.jpg')} />
+            <View style={styles.headerContentStyle}>
+            <Text style={styles.albumTitleStyle}>BOOTLEG</Text>
+            <Text style={styles.albumSingerStyle}>Yonezu Kenshi</Text>
+            </View>
+        </View>
+        <View style={styles.cardSectionStyle}>
+            <Image style={styles.imageStyle} source={require('D:/Dprogram files/nodejs/node_project/wk2/image/bootleg.jpg')} />
+        </View>      
+      </View>
+
+      <View style={styles.cardContainerStyle}>
+        <View style={[styles.thumbnailContainerStyle, styles.cardSectionStyle]}>
+            <Image style={styles.thumbnailStyle} source={require('D:/Dprogram files/nodejs/node_project/wk2/image/yonezu_thumbnail.jpg')} />
+            <View style={styles.headerContentStyle}>
+            <Text style={styles.albumTitleStyle}>STRAY SHEEP</Text>
+            <Text style={styles.albumSingerStyle}>Yonezu Kenshi</Text>
+            </View>
+        </View>
+        <View style={styles.cardSectionStyle}>
+            <Image style={styles.imageStyle} source={require('D:/Dprogram files/nodejs/node_project/wk2/image/stray_sheep.jpg')} />
+        </View>      
+      </View>
+    </ScrollView>
   );
 }
 
@@ -53,6 +107,13 @@ const styles = StyleSheet.create({
   imageStyle: {
     height: 300,
     width: null,
+  },
+  albumTitleStyle: {
+    fontSize: 16, 
+    fontWeight: "bold",
+  },
+  albumSingerStyle: {
+    color: "#595959",
   },
 });
 

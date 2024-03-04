@@ -1,10 +1,10 @@
-import { StyleSheet, Text, View, StatusBar, SafeAreaView, Image } from 'react-native';
+import { StyleSheet, StatusBar, SafeAreaView } from 'react-native';
 import Header from "./scr/components/Header";
 import AlbumList from "./scr/components/AlbumList";
 
 const App = () => {
   return (
-    <SafeAreaView style={{flex: 1}}>
+    <SafeAreaView style={styles.container}>
       <StatusBar />
       <Header />
       <AlbumList />
@@ -13,7 +13,10 @@ const App = () => {
 }
 
 const styles = StyleSheet.create({
-  
+  container: {
+    flex: 1, 
+    backgroundColor: "#FFEED8",
+  },
 });
 
 export default App;

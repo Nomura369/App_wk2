@@ -10,7 +10,7 @@ const Header = () => {
 
 const styles = StyleSheet.create({
   headerStyle: {
-    backgroundColor: "#F8F8F8",
+    backgroundColor: "#E53711",
     justifyContent: "center",
     alignItems: "center",
     height: 60,
@@ -21,6 +21,7 @@ const styles = StyleSheet.create({
     elevation: 2, // Android only
   },
   textStyle: {
+    color: "#FFF",
     fontSize: 20,
   },
 });
