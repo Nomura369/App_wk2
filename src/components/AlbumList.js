@@ -1,70 +1,71 @@
 import { StyleSheet, Text, View, Image, ScrollView } from 'react-native';
+import albumData from "../json/albums.json";
 
 const AlbumList = () => {
   return (
     <ScrollView>
       <View style={styles.cardContainerStyle}>
         <View style={[styles.thumbnailContainerStyle, styles.cardSectionStyle]}>
-            <Image style={styles.thumbnailStyle} source={require('D:/Dprogram files/nodejs/node_project/wk2/image/yonezu_thumbnail.jpg')} />
+            <Image style={styles.thumbnailStyle} source={{uri: albumData[0].thumbnail_image}} />
             <View style={styles.headerContentStyle}>
-            <Text style={styles.albumTitleStyle}>diorama</Text>
-            <Text style={styles.albumSingerStyle}>Yonezu Kenshi</Text>
+            <Text style={styles.albumTitleStyle}>{albumData[0].title}</Text>
+            <Text style={styles.albumArtistStyle}>{albumData[0].artist}</Text>
             </View>
         </View>
         <View style={styles.cardSectionStyle}>
-            <Image style={styles.imageStyle} source={require('D:/Dprogram files/nodejs/node_project/wk2/image/diorama.jpg')} />
+            <Image style={styles.imageStyle} source={{uri: albumData[0].image}} />
         </View>      
       </View>
 
       <View style={styles.cardContainerStyle}>
         <View style={[styles.thumbnailContainerStyle, styles.cardSectionStyle]}>
-            <Image style={styles.thumbnailStyle} source={require('D:/Dprogram files/nodejs/node_project/wk2/image/yonezu_thumbnail.jpg')} />
+            <Image style={styles.thumbnailStyle} source={{uri: albumData[1].thumbnail_image}} />
             <View style={styles.headerContentStyle}>
-            <Text style={styles.albumTitleStyle}>YANKEE</Text>
-            <Text style={styles.albumSingerStyle}>Yonezu Kenshi</Text>
+            <Text style={styles.albumTitleStyle}>{albumData[1].title}</Text>
+            <Text style={styles.albumArtistStyle}>{albumData[1].artist}</Text>
             </View>
         </View>
         <View style={styles.cardSectionStyle}>
-            <Image style={styles.imageStyle} source={require('D:/Dprogram files/nodejs/node_project/wk2/image/yankee.jpeg')} />
+            <Image style={styles.imageStyle} source={{uri: albumData[1].image}} />
         </View>      
       </View>
 
       <View style={styles.cardContainerStyle}>
         <View style={[styles.thumbnailContainerStyle, styles.cardSectionStyle]}>
-            <Image style={styles.thumbnailStyle} source={require('D:/Dprogram files/nodejs/node_project/wk2/image/yonezu_thumbnail.jpg')} />
+            <Image style={styles.thumbnailStyle} source={{uri: albumData[2].thumbnail_image}} />
             <View style={styles.headerContentStyle}>
-            <Text style={styles.albumTitleStyle}>Bremen</Text>
-            <Text style={styles.albumSingerStyle}>Yonezu Kenshi</Text>
+            <Text style={styles.albumTitleStyle}>{albumData[2].title}</Text>
+            <Text style={styles.albumArtistStyle}>{albumData[2].artist}</Text>
             </View>
         </View>
         <View style={styles.cardSectionStyle}>
-            <Image style={styles.imageStyle} source={require('D:/Dprogram files/nodejs/node_project/wk2/image/bremen.jpg')} />
+            <Image style={styles.imageStyle} source={{uri: albumData[2].image}} />
         </View>      
       </View>
 
       <View style={styles.cardContainerStyle}>
         <View style={[styles.thumbnailContainerStyle, styles.cardSectionStyle]}>
-            <Image style={styles.thumbnailStyle} source={require('D:/Dprogram files/nodejs/node_project/wk2/image/yonezu_thumbnail.jpg')} />
+            <Image style={styles.thumbnailStyle} source={{uri: albumData[3].thumbnail_image}} />
             <View style={styles.headerContentStyle}>
-            <Text style={styles.albumTitleStyle}>BOOTLEG</Text>
-            <Text style={styles.albumSingerStyle}>Yonezu Kenshi</Text>
+            <Text style={styles.albumTitleStyle}>{albumData[3].title}</Text>
+            <Text style={styles.albumArtistStyle}>{albumData[3].artist}</Text>
             </View>
         </View>
         <View style={styles.cardSectionStyle}>
-            <Image style={styles.imageStyle} source={require('D:/Dprogram files/nodejs/node_project/wk2/image/bootleg.jpg')} />
+            <Image style={styles.imageStyle} source={{uri: albumData[3].image}} />
         </View>      
       </View>
 
       <View style={styles.cardContainerStyle}>
         <View style={[styles.thumbnailContainerStyle, styles.cardSectionStyle]}>
-            <Image style={styles.thumbnailStyle} source={require('D:/Dprogram files/nodejs/node_project/wk2/image/yonezu_thumbnail.jpg')} />
+            <Image style={styles.thumbnailStyle} source={{uri: albumData[4].thumbnail_image}} />
             <View style={styles.headerContentStyle}>
-            <Text style={styles.albumTitleStyle}>STRAY SHEEP</Text>
-            <Text style={styles.albumSingerStyle}>Yonezu Kenshi</Text>
+            <Text style={styles.albumTitleStyle}>{albumData[4].title}</Text>
+            <Text style={styles.albumArtistStyle}>{albumData[4].artist}</Text>
             </View>
         </View>
         <View style={styles.cardSectionStyle}>
-            <Image style={styles.imageStyle} source={require('D:/Dprogram files/nodejs/node_project/wk2/image/stray_sheep.jpg')} />
+            <Image style={styles.imageStyle} source={{uri: albumData[4].image}} />
         </View>      
       </View>
     </ScrollView>
@@ -112,7 +113,7 @@ const styles = StyleSheet.create({
     fontSize: 16, 
     fontWeight: "bold",
   },
-  albumSingerStyle: {
+  albumArtistStyle: {
     color: "#595959",
   },
 });

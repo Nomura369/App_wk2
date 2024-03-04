@@ -1,6 +1,6 @@
 import { StyleSheet, StatusBar, SafeAreaView } from 'react-native';
-import Header from "./scr/components/Header";
-import AlbumList from "./scr/components/AlbumList";
+import Header from "./src/components/Header";
+import AlbumList from "./src/components/AlbumList";
 
 const App = () => {
   return (
